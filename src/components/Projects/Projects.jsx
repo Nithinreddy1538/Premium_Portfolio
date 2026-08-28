@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import { slideRight } from "../../animations/scrollAnimation";
 import gsap from "gsap";
 import travelBuddyImg from "../../assets/image.png";
-import melodifyImg from "../../assets/image1.png";
+import melodifyVideo from "../../assets/video.mp4";
 
 const projects = [
   {
@@ -30,12 +30,12 @@ const projects = [
   {
     title: "Melodify Music Streamer",
     tag: "Interactive Web App",
-    image: melodifyImg,
+    video: melodifyVideo,
     description:
       "Sleek audio streaming application featuring personalized playlists, dynamic visualizer themes, and a modern responsive interface.",
-    tech: ["HTML5", "CSS3", "JavaScript", "Web Audio API", "JSON"],
-    github: "https://github.com/Nithinreddy1538/Melodify_music_app",
-    demo: "https://nithinreddy1538.github.io/Melodify_music_app/",
+    tech: ["React + Vite", "Express.js", "Css", "Web Audio API's", "Web Image API's","Firebase API","Aiven(Sql)","Render(Backend)","vercel(Frontend)","Cloudary Api's (Urls)"],
+    github: "https://github.com/nithinkreddy1538-sketch/Rythmix",
+    demo: "https://rythmix-theta.vercel.app/",
   },
 ];
 
@@ -70,7 +70,23 @@ function Projects() {
           >
             <div className="image-box">
               <a href={project.demo} target="_blank" rel="noreferrer" tabIndex="-1">
-                <img src={project.image} alt={project.title} loading="lazy" />
+                {project.video ? (
+                  <video
+                    src={project.video}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="project-media"
+                  />
+                ) : (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    loading="lazy"
+                    className="project-media"
+                  />
+                )}
                 <div className="image-overlay">
                   <span>View Live Project ↗</span>
                 </div>
