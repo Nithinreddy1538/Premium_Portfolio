@@ -1,0 +1,52 @@
+/* Hide the default cursor for the whole page */
+body {
+  /* Consider adding a fallback for mobile or if JS fails */
+  cursor: none;
+}
+
+.cursor-dot,
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  pointer-events: none; /* Cursors should not be interactive */
+  z-index: 9999;
+}
+
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #64ffda; /* Main accent color */
+  transition: transform 0.2s cubic-bezier(0.19, 1, 0.22, 1), width 0.3s, height 0.3s, background-color 0.3s;
+  box-shadow: 0 0 10px #64ffda, 0 0 20px #64ffda; /* Glow effect */
+}
+
+.cursor-ring {
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(100, 255, 218, 0.5);
+  transition: left 0.1s ease-out, top 0.1s ease-out, width 0.3s, height 0.3s, opacity 0.3s, border-color 0.3s;
+}
+
+/* Hover effects */
+.cursor-dot.hover {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(100, 255, 218, 0.1); /* Subtle fill on hover */
+  box-shadow: none; /* Remove glow when it becomes the border */
+}
+
+.cursor-ring.hover {
+  opacity: 0;
+  width: 40px;
+  height: 40px;
+  border-color: #00d4ff; /* Change color on hover for a nice effect */
+}
+
+/* Hide on mobile */
+@media (max-width: 768px) {
+  .cursor-dot, .cursor-ring { display: none; }
+  body { cursor: auto; }
+}

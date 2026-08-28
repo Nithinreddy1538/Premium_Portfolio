@@ -1,0 +1,82 @@
+.aurora-container{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+overflow:hidden;
+z-index:-20;
+background:#050816;
+}
+
+.aurora{
+position:absolute;
+width:700px;
+height:700px;
+filter:blur(120px);
+opacity:.45;
+border-radius:50%;
+animation:float 14s ease-in-out infinite;
+}
+
+.aurora1{
+background:#64ffda;
+top:-200px;
+left:-150px;
+}
+
+.aurora2{
+background:#7c4dff;
+bottom:-250px;
+right:-150px;
+animation-delay:2s;
+}
+
+.aurora3{
+background:#00d4ff;
+top:40%;
+left:45%;
+animation-delay:4s;
+}
+
+.aurora4{
+background:#ff4fd8;
+bottom:15%;
+left:20%;
+animation-delay:6s;
+}
+
+.noise{
+position:absolute;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle at center,
+transparent 60%,
+rgba(255,255,255,.02));
+mix-blend-mode:soft-light;
+}
+
+@keyframes float{
+
+0%{
+transform:translate(0,0) scale(1);
+}
+
+25%{
+transform:translate(80px,-40px) scale(1.15);
+}
+
+50%{
+transform:translate(-40px,60px) scale(.95);
+}
+
+75%{
+transform:translate(60px,30px) scale(1.1);
+}
+
+100%{
+transform:translate(0,0) scale(1);
+}
+
+}

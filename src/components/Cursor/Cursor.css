@@ -1,0 +1,58 @@
+@media (hover: hover) and (pointer: fine) {
+    body {
+        cursor: none;
+    }
+
+    .cursor-dot {
+        position: fixed;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        pointer-events: none;
+        left: -4px;
+        top: -4px;
+        background: #64ffda;
+        z-index: 999999;
+        box-shadow: 0 0 10px #64ffda, 0 0 20px #00d4ff;
+        will-change: transform;
+        transition: opacity 0.2s ease, transform 0.05s linear;
+    }
+
+    .cursor-ring {
+        position: fixed;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        pointer-events: none;
+        left: -18px;
+        top: -18px;
+        border: 1.5px solid rgba(100, 255, 218, 0.6);
+        background: rgba(100, 255, 218, 0.04);
+        z-index: 999998;
+        box-shadow: 0 0 15px rgba(100, 255, 218, 0.2);
+        will-change: transform;
+        transition: width 0.25s ease, height 0.25s ease, border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease, left 0.25s ease, top 0.25s ease;
+    }
+
+    .cursor-ring.active {
+        width: 60px;
+        height: 60px;
+        left: -30px;
+        top: -30px;
+        background: rgba(100, 255, 218, 0.12);
+        border-color: #64ffda;
+        box-shadow: 0 0 25px rgba(100, 255, 218, 0.6), 0 0 45px rgba(124, 77, 255, 0.4);
+    }
+
+    .cursor-dot.active {
+        transform: scale(0.6);
+        background: #fff;
+    }
+}
+
+@media (hover: none), (pointer: coarse) {
+    .cursor-dot,
+    .cursor-ring {
+        display: none !important;
+    }
+}

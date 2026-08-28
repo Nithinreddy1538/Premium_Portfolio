@@ -1,0 +1,141 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+html,
+body,
+#root{
+    width:100%;
+    min-height:100%;
+}
+
+body{
+    background:#050816;
+    color:#ffffff;
+    font-family:"Poppins",sans-serif;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+}
+
+/* Hide Scrollbar */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-track{
+    background:#050816;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#64ffda;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#45e6c4;
+}
+
+/* Selection */
+
+::selection{
+    background:#64ffda;
+    color:#050816;
+}
+
+/* Images */
+
+img{
+    max-width:100%;
+    display:block;
+    user-select:none;
+}
+
+/* Links */
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* Buttons */
+
+button{
+    font:inherit;
+    border:none;
+    outline:none;
+}
+
+/* Inputs */
+
+input,
+textarea,
+button{
+    font-family:"Poppins",sans-serif;
+}
+
+/* Remove Mobile Tap Highlight */
+
+*{
+    -webkit-tap-highlight-color:transparent;
+}
+
+/* Custom Cursor */
+
+@media (hover: hover) and (pointer: fine) {
+    *{
+        cursor:none;
+    }
+}
+
+/* Section */
+
+section{
+    position:relative;
+    width:100%;
+}
+
+/* Responsive */
+
+@media (max-width:1024px){
+
+section{
+padding:90px 8%;
+}
+
+}
+
+@media (max-width:768px){
+
+body{
+font-size:15px;
+}
+
+section{
+padding:80px 6%;
+}
+
+}
+
+@media (max-width:480px){
+
+body{
+font-size:14px;
+}
+
+section{
+padding:70px 5%;
+}
+
+}

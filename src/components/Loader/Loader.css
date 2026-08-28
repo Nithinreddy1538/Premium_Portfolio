@@ -1,0 +1,242 @@
+.loader{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+
+    background:
+    radial-gradient(circle at center,#111827,#05070d);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+    z-index:9999;
+
+    animation:fadeIn .5s ease;
+}
+
+
+.loader-content{
+
+    text-align:center;
+
+}
+
+
+/* Logo */
+
+.loader h1{
+
+    font-size:130px;
+    color:#64ffda;
+
+    margin:0;
+
+    font-weight:800;
+
+    text-shadow:
+    0 0 20px #64ffda,
+    0 0 50px #64ffda;
+
+    animation:
+    zoom 1.2s ease,
+    floating 3s infinite ease-in-out;
+
+}
+
+
+/* Name */
+
+.loader h2{
+
+    font-size:45px;
+
+    letter-spacing:12px;
+
+    color:white;
+
+    margin-top:5px;
+
+    font-weight:600;
+
+}
+
+
+/* Loading Text */
+
+.loader p{
+
+    margin-top:20px;
+
+    color:#aaa;
+
+    letter-spacing:4px;
+
+    font-size:14px;
+
+}
+
+
+/* Progress */
+
+.progress{
+
+    width:320px;
+
+    height:7px;
+
+    background:#1c1f26;
+
+    margin:35px auto;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 0 15px rgba(100,255,218,.3);
+
+}
+
+
+.bar{
+
+    height:100%;
+
+    width:0%;
+
+    background:
+    linear-gradient(
+        90deg,
+        #64ffda,
+        #00bcd4,
+        #64ffda
+    );
+
+
+    animation:load 4s linear forwards;
+
+
+    box-shadow:
+    0 0 15px #64ffda;
+
+}
+
+
+
+/* Animations */
+
+
+@keyframes load{
+
+    from{
+        width:0%;
+    }
+
+    to{
+        width:100%;
+    }
+
+}
+
+
+@keyframes zoom{
+
+    0%{
+
+        transform:scale(.3);
+
+        opacity:0;
+
+    }
+
+
+    100%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+
+@keyframes floating{
+
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+
+    50%{
+
+        transform:translateY(-15px);
+
+    }
+
+}
+
+
+@keyframes fadeIn{
+
+
+    from{
+
+        opacity:0;
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+
+
+/* Mobile */
+
+@media(max-width:600px){
+
+
+.loader h1{
+
+    font-size:90px;
+
+}
+
+
+.loader h2{
+
+    font-size:28px;
+
+    letter-spacing:7px;
+
+}
+
+
+.progress{
+
+    width:240px;
+
+}
+
+
+}
+.fade-out{
+
+    opacity:0;
+
+    transition:.5s ease;
+
+}
