@@ -5,18 +5,20 @@ import { slideRight } from "../../animations/scrollAnimation";
 import gsap from "gsap";
 import travelBuddyImg from "../../assets/image.png";
 import melodifyVideo from "../../assets/video.mp4";
+import bankingVideo from "../../assets/bank.mp4";
+
 
 const projects = [
-  {
-    title: "Secure Banking & Finance Portal",
-    tag: "Full Stack MERN",
-    image: "/projects/my-banking-app.svg",
-    description:
-      "A modern financial dashboard with real-time balance tracking, multi-factor security, transaction management, and responsive analytics.",
-    tech: ["React", "Node.js", "Express", "MongoDB", "TailwindCSS"],
-    github: "https://github.com/Nithinreddy1538",
-    demo: "https://my-banking-app.onrender.com",
-  },
+ {
+  title: "Secure Banking & Finance Portal",
+  tag: "Full Stack MERN",
+  video: bankingVideo,
+  description:
+    "A modern financial dashboard with real-time balance tracking, multi-factor security, transaction management, and responsive analytics.",
+  tech: ["React", "Node.js", "Express", "MongoDB", "TailwindCSS"],
+  github: "https://github.com/Nithinreddy1538",
+  demo: "https://my-banking-app.onrender.com",
+},
   {
     title: "Travel Buddy",
     tag: "UG Capstone Project",
