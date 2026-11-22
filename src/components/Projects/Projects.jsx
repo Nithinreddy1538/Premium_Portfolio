@@ -3,7 +3,7 @@ import { FaGithub, FaExternalLinkAlt, FaCode } from "react-icons/fa";
 import { useEffect, useRef } from "react";
 import { slideRight } from "../../animations/scrollAnimation";
 import gsap from "gsap";
-import travelBuddyImg from "../../assets/image.png";
+import travelVideo from "../../assets/TravelBuddy.mp4";
 import melodifyVideo from "../../assets/video.mp4";
 import bankingVideo from "../../assets/bank.mp4";
 
@@ -22,7 +22,7 @@ const projects = [
   {
     title: "Travel Buddy",
     tag: "UG Capstone Project",
-    image: travelBuddyImg,
+video: travelVideo,
     description:
       "Comprehensive ride-sharing and travel platform with interactive route mapping, automated trip planning, and seamless payments.",
     tech: ["HTML5", "CSS3", "JavaScript", "Firebase", "Google Maps API"],
