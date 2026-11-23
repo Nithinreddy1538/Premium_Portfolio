@@ -11,13 +11,13 @@ import bankingVideo from "../../assets/bank.mp4";
 const projects = [
  {
   title: "Secure Banking & Finance Portal",
-  tag: "Full Stack MERN",
+  tag: "Full Stack Development",
   video: bankingVideo,
   description:
     "A modern financial dashboard with real-time balance tracking, multi-factor security, transaction management, and responsive analytics.",
-  tech: ["React", "Node.js", "Express", "MongoDB", "TailwindCSS"],
+  tech: ["React","CSS", "Django", "Django FrameWork", "REST APIs", "Mysql"],
   github: "https://github.com/Nithinreddy1538",
-  demo: "https://my-banking-app.onrender.com",
+  demo: "https://banking-management-frontend.onrender.com/",
 },
   {
     title: "Travel Buddy",
